@@ -1,0 +1,27 @@
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_source  = '''
+let g:deoplete#enable_at_startup = 1
+source ~/.config/nvim/userautoload/plugins/plugins-deoplete.vim
+'''
+if = 'has("nvim")'
+ 
+[[plugins]]
+repo = 'zchee/deoplete-clang'
+if = 'has("nvim")'
+depends=['deoplete']
+on_ft = ['c', 'cpp']
+hook_source = '''
+" libclang shared library path
+let g:deoplete#sources#clang#libclang_path = '/usr/local/opt/llvm/lib/libclang.dylib'
+" clang builtin header path
+let g:deoplete#sources#clang#clang_header = '/usr/local/opt/llvm/include/clang'
+" libclang default compile flags
+let g:deoplete#sources#clang#flags = ['-x', 'c++', '-std=c++11']
+'''
+ 
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
+if = 'has("nvim")'
+hook_source = 'source ~/.config/nvim/userautoload/plugins/plugins-denite.vim'
