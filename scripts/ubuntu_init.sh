@@ -1,5 +1,5 @@
 # minimum components
-sudo apt get install -y vim terminator tmux zsh git tig
+sudo apt-get install -y vim terminator tmux zsh tig
 # oh-my-zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
@@ -9,4 +9,3 @@ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
-source ~/.zshrc
