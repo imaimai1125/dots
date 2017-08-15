@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # minimum components
 sudo apt-get install -y vim terminator tmux zsh tig
 # oh-my-zsh
@@ -9,3 +11,5 @@ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+# tmux
+ln -s ~/dots/tmux.conf ~/.tmux.conf
